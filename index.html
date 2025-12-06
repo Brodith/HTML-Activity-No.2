@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<head> and Style Guide Basics-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMCC-CCIS Week 2025 - Campus Event</title>
+    <link rel="icon" type="image/ccis-icon.jpg" href="images/ccis-icon.jpg">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: white;
+            color: #222;
+        }
+        header, nav, section, article, aside, footer { padding: 15px 20px; }
+        header {
+            background-color: green;
+            color: black;
+            text-align: center;
+        }
+        nav { background-color: #dbe7f5; }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #003d73;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px; 
+        }
+        .main-section { flex: 3 1 280px; }
+        .sidebar {
+            flex: 1 1 200px;
+            background:  #dbe7f5;
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 0 4px rgba(0,0,0,0.1);
+        }
+        .card {
+            background: rgb(120, 238, 120);
+            margin-bottom: 20px;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+        }
+        .code-block {
+            background-color: #222;
+            color: #eee;
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        .banner-img {
+            width: 95%;
+            border-radius: 10px;
+            border: 3px solid green;
+        }
+        .primary-btn {
+            background-color: blue;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .primary-btn:hover { background-color: #0058a3; }
+        .hidden { display: none; }
+        @media (max-width: 700px) {
+            .container { flex-direction: column; }
+            nav a { display: block; margin-bottom: 8px; }
+        }
+    </style>
+
+    <script>
+       <!-- Button + JavaScript Interactivity-->
+        function toggleFAQ() {
+            document.getElementById("faq-section").classList.toggle("hidden");
+        }
+    </script>
+</head>
+<body>
+<!--Layout Using Semantic Tags + Divs, Classes, IDs-->
+<header id="hero">
+    <h1>SMCC-CCIS Week 2025 &#127881;</h1>
+    <p>Celebrating Innovation, Technology & Excellence</p>
+</header>
+
+<nav>
+    <a href="#about">Overview</a>
+    <a href="#highlights">Highlights</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#location">Location</a>
+    <a href="#techdemo">Tech Demo</a>
+</nav>
+
+<div class="container">
+
+    <section class="main-section">
+
+        <article id="about" class="card">
+            <h2>About SMCC-CCIS Week 2025</h2>
+            <!--File Paths + Images-->
+            <img src="Images/ccis-banner.png" alt="SMCC-CCIS Week 2025 Banner" class="banner-img">
+            <p>
+                SMCC-CCIS Week 2025 is a yearly celebration highlighting the talents and skills of Computer Studies students.
+                The event showcases technology competitions, seminars, exhibits, digital arts, and fun activities.
+            </p>
+        </article>
+
+        <article id="highlights" class="card">
+            <!--Entities, Symbols, Emojis-->
+            <h2>Event Highlights &starf; &starf;</h2>
+            <ul>
+                <li>&#127979; TechTalks with Guest Speakers</li>
+                <li>&#128187; Hackathon & Coding Battles</li>
+                <li>&#127918; E-Sports ML Tournament</li>
+                <li>&#127942; IT Capstone & Research Exhibit</li>
+                <li>&#127917; Opening Parade & Talent Showcase</li>
+            </ul>
+        </article>
+
+        <article id="schedule" class="card">
+            <h2>Event Schedule &#128197;</h2>
+            <p><strong>Date:</strong> February 10-14, 2025</p>
+            <p><strong>Venue:</strong> SMCC Campus Grounds</p>
+            <p>Various activities are scheduled throughout the week covering IT, computer science, gaming, and tech innovation.</p>
+        </article>
+
+        <article id="location" class="card">
+            <h2>Event Location &#128205;</h2>
+            <p>Find the venue on the map below:</p>
+
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px;">
+                <!--Iframe for Map or Video-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1970.4123822534605!2d125.33931977827238!3d8.988267098421646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301ca2f04581cbb%3A0xe4e2656c7835d5f2!2sSaint%20Michael%20College%20of%20Caraga!5e0!3m2!1sen!2sph!4v1764873479265!5m2!1sen!2sph"
+                 width="800" height="420" style="border: 1px;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </article>
+
+        <article class="card">
+            <h2>Frequently Asked Questions &#10068;</h2>
+            <button class="primary-btn" onclick="toggleFAQ()">Toggle FAQ</button>
+
+            <div id="faq-section">
+                <h3>1. Do I need to register?</h3>
+                <p>Yes. Registration is required for competitions and seminars.</p>
+
+                <h3>2. Is the event free?</h3>
+                <p>Most activities are free except selected competitions.</p>
+            </div>
+        </article>
+
+        <article id="techdemo" class="card">
+            <h2>Tech Demo: Code & Output &#128187;</h2>
+            <!--Computer Code Tags-->
+            <div class="code-block">
+<pre><code>// Registration popup example
+function openForm() {
+    alert("Registration form opened!");
+}
+</code></pre>
+            </div>
+            <p>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> to open VS Code's command palette.</p>
+            <p><samp>Registration successful. Welcome to CCIS Week!</samp></p>
+        </article>
+
+        <article class="card">
+            <!--URL Encoding Example-->
+            <h2>URL Encoding Example &#128187;</h2>
+            <div class="code-block">
+                <code>https://myschool.edu/register?event=CCIS%20Week%202025&section=A</code>
+            </div>
+            <p><em>%20</em> represents a space.</p>
+        </article>
+
+        <article class="card">
+            <!--HTML vs XHTML Mini Demo-->
+            <h2>HTML vs XHTML Example &#128269;</h2>
+            <p>Compare the following snippets:</p>
+            <div class="code-block">
+<pre><code>&lt;!-- HTML-style (not strictly self-closed) --&gt;
+&lt;br&gt;
+&lt;input type="text" name="fullname"&gt;
+
+&lt;!-- XHTML-style (self-closed, lowercase, quoted attributes) --&gt;
+&lt;br /&gt;
+&lt;input type="text" name="fullname" /&gt;
+</code></pre>
+            </div>
+            <p>XHTML requires properly closed tags, lowercase element names, and quoted attributes.</p>
+        </article>
+
+    </section>
+
+    <aside class="sidebar">
+        <h3>Quick Info &#128712;</h3>
+        <p><strong>Organizer:</strong> CCIS Department</p>
+        <p><strong>School:</strong> Saint Michael College of Caraga</p>
+        <p><strong>Contact:</strong> ccis@smccnasipit.edu.ph</p>
+
+        <h4>HTML Charset</h4>
+        <div class="code-block">
+            <code>&lt;meta charset="UTF-8"&gt;</code>
+        </div>
+        <p>UTF-8 ensures emojis &#128077; and symbols &star; are displayed correctly.</p>
+    </aside>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 SMCC-CCIS Week &middot; All Rights Reserved &star;</p>
+</footer>
+
+</body>
+</html>
